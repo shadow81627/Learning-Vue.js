@@ -1,27 +1,12 @@
-
-
-<div id="app" class="container">
-  <h2>
-    <span>Pomodoro</span>
-    <button :disabled="state==='started'" title="start" @click="start()">
-      <i class="glyphicon glyphicon-play"></i>
-    </button>
-    <button :disabled="state!=='started'" title="pause" @click="pause()">
-      <i class="glyphicon glyphicon-pause"></i>
-    </button>
-    <button :disabled="state!=='started' && state !== 'paused'" title="stop" @click="stop()">
-      <i class="glyphicon glyphicon-stop"></i>
-    </button>
-  </h2>
-  <h3>{{ title }}</h3>
-  <div class="well">
-    <div class="pomodoro-timer">
-      <span>{{ min }}</span>:<span>{{ sec }}</span>
-    </div>
-  </div>
-  <a v-if="pomodoroState === 'rest'" href="http://thecatapi.com"><img :src="'http://thecatapi.com/api/images/get?format=src&type=gif&ts=' + timestamp"></a>
-</div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
-		<script type="text/javascript" src="index.js"></script>
-		<link rel="stylesheet" href="index.css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>pomodoro</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
