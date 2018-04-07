@@ -15,16 +15,16 @@ export default {
 </script>
 
 <style scoped>
-  .removed {
-    color: gray;
-  }
-  .removed span {
-    text-decoration: line-through;
-  }
-  li {
-    list-style-type: none;
-  }
-  li span {
-    margin-left: 5px;
-  }
+.removed {
+  color: gray;
+}
+.removed label {
+  text-decoration: line-through;
+}
+li {
+  list-style-type: none;
+}
+li span {
+  margin-left: 5px;
+}
 </style>
