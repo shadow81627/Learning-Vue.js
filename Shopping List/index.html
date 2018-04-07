@@ -33,8 +33,11 @@
 
 <!--change title template-->
 <template id="change-title-template">
-  <em>Change the title of your shopping list here</em>
-  <input v-model="title" v-on:input="onInput"/>
+  <div>
+      <em>Change the title of your shopping list here</em>
+      <input v-bind:value="value" v-on:input="onInput"/>
+  </div>
+
 </template>
 
 <!--main container markup-->
@@ -44,11 +47,11 @@
   <items-component :items="items"></items-component>
   <div class="footer">
     <hr/>
-    <change-title-component :title="title"></change-title-component>
+    <change-title-component v-model="title"></change-title-component>
   </div>
 </div>
 
 	</body>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
 		<script type="text/javascript" src="index.js"></script>
 </html>

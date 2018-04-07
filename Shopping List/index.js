@@ -21,7 +21,7 @@ Vue.component("items-component", {
 //change title component
 Vue.component("change-title-component", {
   template: "#change-title-template",
-  props: ["title", "value"],
+  props: ["value"],
   methods: { 
     onInput: function (event) { 
       this.$emit('input', event.target.value) 
