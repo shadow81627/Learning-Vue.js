@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+  <div id="app" class="container">
+    <h2>{{ title }}</h2>
+    <add-item-component></add-item-component>
+    <items-component></items-component>
+    <div class="footer">
+      <hr/>
+      <change-title-component></change-title-component>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import AddItemComponent from './components/AddItemComponent'
+import ItemsComponent from './components/ItemsComponent'
+import ChangeTitleComponent from './components/ChangeTitleComponent'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    AddItemComponent,
+    ItemsComponent,
+    ChangeTitleComponent
+  },
+  data () {
+    return {
+      items: [{ text: 'Bananas', checked: true },
+        { text: 'Apples', checked: false }]
+    }
+  },
+  methods: {
+    addItem (text) {
+      this.items.push({
+        text: text,
+        checked: false
+      })
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
