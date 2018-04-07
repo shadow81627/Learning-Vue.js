@@ -5,7 +5,7 @@
     <items-component :items="items"></items-component>
     <div class="footer">
       <hr/>
-      <change-title-component></change-title-component>
+      <change-title-component v-model="title"></change-title-component>
     </div>
   </div>
 </template>
@@ -24,7 +24,8 @@ export default {
   data () {
     return {
       items: [{ text: 'Bananas', checked: true },
-        { text: 'Apples', checked: false }]
+        { text: 'Apples', checked: false }],
+      title: 'My Shopping List'
     }
   },
   methods: {
