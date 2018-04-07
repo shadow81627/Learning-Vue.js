@@ -6,9 +6,9 @@
 	<!--add new item template-->
 <template id="add-item-template">
   <div class="input-group">
-    <input v-model="newItem" placeholder="add shopping list item" type="text" class="form-control">
+    <input @keyup.enter="addItem" v-model="newItem" placeholder="add shopping list item" type="text" class="form-control">
     <span class="input-group-btn">
-      <button class="btn btn-default" type="button">Add!</button>
+      <button @click="addItem" class="btn btn-default" type="button">Add!</button>
     </span>
   </div>
 </template>
@@ -43,7 +43,7 @@
 <!--main container markup-->
 <div id="app" class="container">
   <h2>{{ title }}</h2>
-  <add-item-component :items="items"></add-item-component>
+  <add-item-component v-on:add="addItem" :items="items"></add-item-component>
   <items-component :items="items"></items-component>
   <div class="footer">
     <hr/>

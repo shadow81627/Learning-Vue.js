@@ -1,12 +1,26 @@
 var data = {
   items: [{ text: "Bananas", checked: true }, { text: "Apples", checked: false }],
   title: "My Shopping List",
-  newItem: ""
 };
 //add item compoennt
 Vue.component("add-item-component", {
   template: "#add-item-template",
-  props: ["items", "newItem"]
+  data: function () {
+    return {
+      newItem: ""
+    }
+  },
+  methods: {
+    addItem: function () {
+      var text;
+
+      text = this.newItem.trim();
+      if (text) {
+        this.$emit("add", this.newItem);
+        this.newItem = ""
+      }
+    }
+  }
 });
 //item component
 Vue.component("item-component", {
@@ -24,26 +38,20 @@ Vue.component("change-title-component", {
   props: ["value"],
   methods: { 
     onInput: function (event) { 
-      this.$emit('input', event.target.value) 
+      this.$emit("input", event.target.value) 
     } 
   }
 });
 
 new Vue({
-  el: "#app",
+  el: '#app',
   data: data,
   methods: {
-    addItem: function () {
-      var text;
-
-      text = this.newItem.trim();
-      if (text) {
-        this.items.push({
-          text: text,
-          checked: false
-        });
-        this.newItem = "";
-      }
+    addItem: function (text) {
+      this.items.push({
+        text: text,
+        checked: false
+      });
     }
   }
 });
