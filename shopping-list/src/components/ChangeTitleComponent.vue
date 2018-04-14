@@ -1,7 +1,7 @@
 <template>
   <div>
       <em>Change the title of your shopping list here</em>
-      <input v-bind:value="value" v-on:input="onInput"/>
+      <input :value="value" @input="onInput"/>
   </div>
 </template>
 <script>
