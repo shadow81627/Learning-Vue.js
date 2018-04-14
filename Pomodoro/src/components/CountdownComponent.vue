@@ -1,7 +1,7 @@
 <template>
 <div class="well">
   <div class="pomodoro-timer">
-    <span>{{ min | leftpad}}:{{ sec | leftpad}}</span>
+    <span>{{ min | leftpad }}:{{ sec | leftpad }}</span>
   </div>
 </div>
 </template>

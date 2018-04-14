@@ -1,6 +1,6 @@
 <template>
 <h2>
-  <span>{{ 'Pomodoro' | lowercase }}</span>
+  <span>{{ 'Pomodoro' | lowercase | uppercase | addspace }}</span>
   <button >
     <i class="glyphicon glyphicon-play"></i>
   </button>

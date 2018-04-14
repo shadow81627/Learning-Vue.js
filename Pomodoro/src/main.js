@@ -5,13 +5,6 @@ import App from './App'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  components: { App },
-  template: '<App/>'
-})
-
 // Lowercase filter
 Vue.filter('lowercase', (key) => {
   return key.toLowerCase()
@@ -24,3 +17,22 @@ Vue.filter('leftpad', (value) => {
   }
   return '0' + value
 })
+
+// Uppercase filter
+Vue.filter('uppercase', (key) => {
+  return key.toUpperCase()
+})
+
+// Add space to right side of string
+Vue.filter('addspace', (value) => {
+  return value + ' '
+})
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})
+
+
