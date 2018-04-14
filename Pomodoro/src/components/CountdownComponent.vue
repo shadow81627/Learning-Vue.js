@@ -1,7 +1,7 @@
 <template>
 <div class="well">
   <div class="pomodoro-timer">
-    <span>{{ min + ':' + sec }}</span>
+    <span>{{ min | leftpad}}:{{ sec | leftpad}}</span>
   </div>
 </div>
 </template>
@@ -10,8 +10,8 @@
 export default {
   data () {
     return {
-      min: '10',
-      sec: '59'
+      min: '1',
+      sec: '5'
     }
   }
 }
