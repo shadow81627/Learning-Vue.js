@@ -12,6 +12,6 @@ new Vue({
   template: '<App/>'
 })
 
-Vue.filter('lowercase', (key) => { 
-  return key.toLowerCase() 
-}) 
+Vue.filter('lowercase', (key) => {
+  return key.toLowerCase()
+})
