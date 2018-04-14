@@ -1,14 +1,16 @@
 <template>
-<h3>{{ title }}</h3>
+<h3>{{ isworking ? workingtitle : restingtitle }}</h3>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      title: 'Learning Vue.js!'
+      workingtitle: 'Work!',
+      restingtitle: 'Rest!'
     }
-  }
+  },
+  props: ['isworking']
 }
 </script>
 

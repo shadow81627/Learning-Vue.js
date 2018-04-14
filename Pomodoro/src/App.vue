@@ -2,7 +2,7 @@
 <div id="app" class="container">
   <controls-component></controls-component>
   <countdown-component></countdown-component>
-  <state-title-component></state-title-component>
+  <state-title-component v-bind:isworking="isworking"></state-title-component>
   <transition name="fade">
     <kittens-component v-if="kittens"></kittens-component>
   </transition>
@@ -16,7 +16,8 @@ import KittensComponent from './components/KittensComponent'
 import CountdownComponent from './components/CountdownComponent'
 
 window.data = {
-  kittens: true
+  kittens: true,
+  isworking: true
 }
 
 export default {
