@@ -12,6 +12,15 @@ new Vue({
   template: '<App/>'
 })
 
+//Lowercase filter
 Vue.filter('lowercase', (key) => {
   return key.toLowerCase()
+})
+
+//Leftpad filter adds leading 0 for timer
+Vue.filter('leftpad', (value) => {
+  if (value >= 10) {
+    return value
+  }
+  return '0' + value
 })
