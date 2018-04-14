@@ -21,7 +21,15 @@ export default {
     ItemsComponent,
     ChangeTitleComponent
   },
-  props: ['title', 'items']
+  props: ['title', 'items'],
+  methods: { 
+    addItem (text) { 
+      this.items.push({ 
+        text: text, 
+        checked: false 
+      }) 
+    } 
+  }
 }
 </script>
 
