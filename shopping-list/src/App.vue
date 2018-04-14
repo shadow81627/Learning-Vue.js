@@ -7,7 +7,7 @@
   </ul>
   <div class="tab-content">
     <div :class= "index===0 ? 'active' : ''" v-for="(list, index) in shoppinglists" :key="list.id" class="tab-pane" role="tabpanel" :id="list.id">
-      <shopping-list-component :title="list.title" :items="list.items"></shopping-list-component>
+      <shopping-list-component :id="list.id" :title="list.title" :items="list.items" v-on:changeTitle="onChangeTitle"></shopping-list-component>
     </div>
   </div>
 </div>
@@ -15,6 +15,7 @@
 
 <script>
 import ShoppingListComponent from './components/ShoppingListComponent'
+import _ from 'underscore'
 
 export default {
   components: {
@@ -39,6 +40,11 @@ export default {
           items: [{ text: 'George', checked: true }, { text: 'Connor', checked: false }]
         }
       ]
+    }
+  },
+  methods: {
+    onChangeTitle (id, text) {
+      _.findWhere(this.shoppinglists, { id: id }).title = text
     }
   }
 }
