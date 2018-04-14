@@ -8,7 +8,12 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      min: '10',
+      sec: '59'
+    }
+  }
 }
 </script>
 
