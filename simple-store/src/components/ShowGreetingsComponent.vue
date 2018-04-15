@@ -7,7 +7,7 @@
   export default {
     computed: {
       msg () {
-        return this.$store.state.msg
+        return this.$store.getters.getMessage
       }
     }
   }

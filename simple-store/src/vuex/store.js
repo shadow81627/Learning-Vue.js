@@ -1,6 +1,7 @@
 //store.js
 import Vue from 'vue'
 import Vuex from 'vuex'
+import getters from './getters'
 
 Vue.use(Vuex)
 const state = {
@@ -11,4 +12,4 @@ const mutations = {
     state.msg = msg
   }
 }
-export default new Vuex.Store({state, mutations})
+export default new Vuex.Store({state, mutations, getters})
