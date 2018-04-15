@@ -1,17 +1,17 @@
-<template>
-  <input v-model='msg' @keyup='changeMsg'>
-</template>
-<script>
-  export default {
-    computed: {
-      msg() {
-        return this.$store.getters.getMessage
-      }
-    },
-    methods: {
-      changeMsg(ev) {
-        this.$store.commit('changeMessage', ev.target.value)
-      }
-    }
-  }
+<template> 
+  <input :value='msg' @keyup='changeMsg'> 
+</template> 
+<script> 
+  import { mapGetters } from 'vuex' 
+ 
+  export default { 
+    computed: mapGetters({ 
+      msg: 'getMessage' 
+    }), 
+    methods: { 
+      changeMsg(ev) { 
+        this.$store.commit('changeMessage', ev.target.value) 
+      } 
+    } 
+  } 
 </script>

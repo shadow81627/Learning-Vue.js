@@ -4,11 +4,11 @@
 <style>
 </style>
 <script>
-  export default {
-    computed: {
-      msg () {
-        return this.$store.getters.getMessage
-      }
-    }
+  import { mapGetters } from 'vuex'
+
+  export default { 
+    computed: mapGetters({
+      msg: 'getMessage'
+    })
   }
 </script>
