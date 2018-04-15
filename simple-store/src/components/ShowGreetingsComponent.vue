@@ -1,5 +1,8 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <div> 
+    <h1>{{ msg }}</h1> 
+    <div>the message was changed {{ counter }} times</div> 
+  </div> 
 </template>
 <style>
 </style>
@@ -8,7 +11,8 @@
 
   export default { 
     computed: mapGetters({
-      msg: 'getMessage'
+      msg: 'getMessage',
+      counter: 'getCounter'
     })
   }
 </script>
