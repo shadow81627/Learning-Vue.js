@@ -1,8 +1,12 @@
 <template>
-  <div>
+<div class="container">
+  <div class="row">
+    <div class="u-full-width" style="margin-top: 25%">
     <show-greetings-component></show-greetings-component>
     <change-greetings-component></change-greetings-component>
+    </div>
   </div>
+</div>
 </template>
  
 <script>
