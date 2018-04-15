@@ -1,4 +1,8 @@
-html {
+body {
   background-color: #212121;
   color: rgba(255,255,255,.87);
+}
+
+input {
+  color : #212121;
 }
