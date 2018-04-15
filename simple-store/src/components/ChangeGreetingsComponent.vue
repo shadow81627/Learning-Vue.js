@@ -1,17 +1,14 @@
-<template> 
-  <input :value='msg' @keyup='changeMsg'> 
-</template> 
-<script> 
-  import { mapGetters } from 'vuex' 
- 
-  export default { 
-    computed: mapGetters({ 
-      msg: 'getMessage' 
-    }), 
-    methods: { 
-      changeMsg(ev) { 
-        this.$store.commit('changeMessage', ev.target.value) 
-      } 
-    } 
-  } 
+<template>
+  <input :value="msg" @keyup="changeMessage($event.target.value)" @keyup.enter="incrementCounter">
+</template>
+<script>
+  import { mapGetters } from 'vuex'
+  import { mapActions } from 'vuex'
+
+  export default {
+    computed: mapGetters({
+      msg: 'getMessage'
+    }),
+    methods:  mapActions(['changeMessage', 'incrementCounter'])
+  }
 </script>
