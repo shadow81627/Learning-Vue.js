@@ -5,6 +5,9 @@
   </div>
 </template>
 <style>
+h1 {
+    min-height: 7.0rem;
+}
 </style>
 <script>
   import { mapGetters } from 'vuex'
