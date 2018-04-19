@@ -14,11 +14,10 @@
 </template>
 
 <script>
-import ShoppingListComponent from "./components/ShoppingListComponent";
-import ShoppingListTitleComponent from "./components/ShoppingListTitleComponent";
-import _ from "underscore";
-import store from "./vuex/store";
-import { mapGetters } from "vuex";
+import ShoppingListComponent from './components/ShoppingListComponent'
+import ShoppingListTitleComponent from './components/ShoppingListTitleComponent'
+import store from './vuex/store'
+import { mapGetters } from 'vuex'
 
 export default {
   components: {
@@ -26,15 +25,10 @@ export default {
     ShoppingListTitleComponent
   },
   computed: mapGetters({
-    shoppinglists: "getLists"
+    shoppinglists: 'getLists'
   }),
-  methods: {
-    onChangeTitle(id, text) {
-      _.findWhere(this.shoppinglists, { id: id }).title = text;
-    }
-  },
   store
-};
+}
 </script>
 
 <style>

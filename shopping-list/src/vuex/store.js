@@ -1,4 +1,3 @@
-//store.js 
 import Vue from 'vue'
 import Vuex from 'vuex'
 import getters from './getters'
@@ -8,20 +7,18 @@ import mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
-  shoppinglists: [
-    {
-      id: 'groceries',
-      title: 'Groceries',
-      items: [{ text: 'Bananas', checked: true },
+  shoppinglists: [{
+    id: 'groceries',
+    title: 'Groceries',
+    items: [{ text: 'Bananas', checked: true },
       { text: 'Apples', checked: false }]
-    },
-    {
-      id: 'clothes',
-      title: 'Clothes',
-      items: [{ text: 'black dress', checked: false },
+  },
+  {
+    id: 'clothes',
+    title: 'Clothes',
+    items: [{ text: 'black dress', checked: false },
       { text: 'all-stars', checked: false }]
-    }
-  ]
+  }]
 }
 
 export default new Vuex.Store({
@@ -30,4 +27,3 @@ export default new Vuex.Store({
   getters,
   actions
 })
-
