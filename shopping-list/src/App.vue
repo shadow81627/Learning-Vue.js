@@ -16,8 +16,10 @@
 <script>
 import ShoppingListComponent from './components/ShoppingListComponent'
 import _ from 'underscore'
+import store from './vuex/store'
 
 export default {
+  store,
   components: {
     ShoppingListComponent
   },
