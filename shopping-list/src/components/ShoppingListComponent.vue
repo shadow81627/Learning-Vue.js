@@ -5,7 +5,7 @@
     <items-component :items="items"></items-component>
     <div class="footer">
       <hr/>
-      <change-title-component v-on:changeTitle="onChangeTitle" :title="title"></change-title-component>
+      <change-title-component v-on:changeTitle="onChangeTitle" :id="id"></change-title-component>
     </div>
   </div>
 </template>
