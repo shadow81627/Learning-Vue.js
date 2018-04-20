@@ -22,5 +22,7 @@ export default {
 </script>
 
 <style scoped>
-
+button:disabled i {
+  color: gray;
+}
 </style>
