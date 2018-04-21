@@ -2,9 +2,9 @@
 <div id="app" class="container">
   <controls-component></controls-component>
   <countdown-component></countdown-component>
-  <state-title-component v-bind:isworking="isworking"></state-title-component>
+  <state-title-component></state-title-component>
   <transition name="fade">
-    <kittens-component v-show="!isworking"></kittens-component>
+    <kittens-component></kittens-component>
   </transition>
 </div>
 </template>
@@ -15,13 +15,16 @@ import StateTitleComponent from './components/StateTitleComponent'
 import KittensComponent from './components/KittensComponent'
 import CountdownComponent from './components/CountdownComponent'
 import store from './vuex/store'
+import { mapGetters } from 'vuex'
 
 window.data = {
-  kittens: true,
-  isworking: true
+  kittens: true
 }
 
 export default {
+  computed: mapGetters({
+    isworking: 'isWorking'
+  }),
   store,
   name: 'App',
   components: {

@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data () {
     return {
@@ -10,7 +12,9 @@ export default {
       restingtitle: 'Rest!'
     }
   },
-  props: ['isworking']
+  computed: mapGetters({
+    isworking: 'isWorking'
+  })
 }
 </script>
 
