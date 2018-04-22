@@ -22,15 +22,18 @@ export default {
     state.started = true
     state.paused = false
     state.stopped = false
+    state.interval = setInterval(() => tick(state), 1000)
   },
   [types.PAUSE] (state) {
     state.paused = true
     state.started = true
     state.stopped = false
+    clearInterval(state.interval)
   },
   [types.STOP] (state) {
     state.stopped = true
     state.paused = false
     state.started = false
+    togglePomodoro(state, true)
   }
 }
