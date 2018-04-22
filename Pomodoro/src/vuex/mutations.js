@@ -10,6 +10,13 @@ function togglePomodoro (state, toggle) {
   state.counter = state.isWorking ? WORKING_TIME : RESTING_TIME
 }
 
+function tick (state) {
+  if (state.counter === 0) {
+    togglePomodoro(state)
+  }
+  state.counter--
+}
+
 export default {
   [types.START] (state) {
     state.started = true
