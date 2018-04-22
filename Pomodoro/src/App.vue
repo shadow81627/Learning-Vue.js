@@ -4,7 +4,7 @@
   <countdown-component></countdown-component>
   <state-title-component></state-title-component>
   <transition name="fade">
-    <kittens-component></kittens-component>
+    <kittens-component v-show="!isworking"></kittens-component>
   </transition>
 </div>
 </template>
@@ -32,9 +32,15 @@ export default {
     StateTitleComponent,
     KittensComponent,
     CountdownComponent
-  },
-  data () {
-    return window.data
   }
 }
 </script>
+
+<style scoped>
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
+</style>

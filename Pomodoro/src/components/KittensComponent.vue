@@ -15,10 +15,5 @@ export default {
 </script>
 
 <style scoped>
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 1s
-  }
-  .fade-enter, .fade-leave-active {
-    opacity: 0
-  }
+
 </style>
