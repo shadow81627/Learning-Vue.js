@@ -17,7 +17,7 @@
 import ShoppingListComponent from './components/ShoppingListComponent'
 import ShoppingListTitleComponent from './components/ShoppingListTitleComponent'
 import store from './vuex/store'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -27,7 +27,11 @@ export default {
   computed: mapGetters({
     shoppinglists: 'getLists'
   }),
-  store
+  methods: mapActions(['populateShoppingLists']),
+  store,
+  mounted () {
+    this.populateShoppingLists()
+  }
 }
 </script>
 
