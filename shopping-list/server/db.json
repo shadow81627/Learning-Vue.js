@@ -4,6 +4,18 @@
       "title": "new",
       "items": [],
       "id": 1
-    }
+    },
+    {
+    "id": 2,
+    "title": "Groceries",
+    "items": [{ "text": "Bananas", "checked": true },
+      { "text": "Apples", "checked": false }]
+  },
+  {
+    "id": 3,
+    "title": "Clothes",
+    "items": [{ "text": "black dress", "checked": false },
+      { "text": "all-stars", "checked": false }]
+  }
   ]
 }
