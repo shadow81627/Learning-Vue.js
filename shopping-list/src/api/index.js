@@ -19,4 +19,3 @@ export default {
     return ShoppingListsResource.remove({ id: id })
   }
 }
-
