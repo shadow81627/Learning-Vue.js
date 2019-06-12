@@ -1,6 +1,9 @@
 {
   "automerge": true,
+  "bumpVersion": null,
+  "labels": ["dependencies"],
   "extends": [
-    "config:base"
+    "config:base",
+    ":semanticCommits"
   ]
 }
