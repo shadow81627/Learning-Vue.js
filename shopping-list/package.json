@@ -36,7 +36,7 @@
     "chalk": "2.3.2",
     "chromedriver": "2.36.0",
     "copy-webpack-plugin": "4.5.1",
-    "cross-env": "5.1.4",
+    "cross-env": "5.2.0",
     "cross-spawn": "5.1.0",
     "css-loader": "0.28.11",
     "eslint": "4.19.0",
