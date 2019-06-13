@@ -16,7 +16,7 @@
   "dependencies": {
     "npm": "5.7.1",
     "vue": "2.5.16",
-    "vue-router": "3.0.1"
+    "vue-router": "3.0.6"
   },
   "devDependencies": {
     "autoprefixer": "7.2.6",
