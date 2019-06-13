@@ -15,7 +15,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "underscore": "1.8.3",
+    "underscore": "1.9.1",
     "vue": "2.5.16",
     "vuex": "3.0.1"
   },
