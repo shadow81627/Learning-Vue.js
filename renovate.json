@@ -1,4 +1,5 @@
 {
+  "requiredStatusChecks": null,
   "automerge": true,
   "bumpVersion": null,
   "labels": ["dependencies"],
