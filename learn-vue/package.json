@@ -75,7 +75,7 @@
     "selenium-server": "3.141.59",
     "semver": "6.1.1",
     "shelljs": "0.8.3",
-    "sinon": "4.4.6",
+    "sinon": "7.3.2",
     "sinon-chai": "2.14.0",
     "uglifyjs-webpack-plugin": "1.2.4",
     "url-loader": "0.5.9",
