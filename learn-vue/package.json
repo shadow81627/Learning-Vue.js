@@ -14,7 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "npm": "6.9.2",
+    "npm": "6.10.0",
     "vue": "2.6.10",
     "vue-router": "3.0.7"
   },
