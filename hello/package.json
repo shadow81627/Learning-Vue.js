@@ -24,7 +24,7 @@
     "babel-preset-stage-3": "6.24.1",
     "coffee-loader": "0.9.0",
     "coffee-script": "1.12.7",
-    "cross-env": "6.0.3",
+    "cross-env": "7.0.0",
     "css-loader": "3.4.2",
     "file-loader": "5.0.2",
     "jade": "1.11.0",
